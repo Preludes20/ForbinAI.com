@@ -14,15 +14,18 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      overflow: hidden; /* prevent scrollbars */
     }
 
     img {
-      width: auto;
-      max-width: 700px;     /* hard cap for large screens */
+      max-width: 90vw;
+      max-height: 80vh;   /* 👈 critical line — always fit image within 80% of viewport height */
       height: auto;
+      width: auto;
       border: 6px solid #fff;
       box-shadow: 0 0 30px rgba(0,0,0,0.08);
       margin-bottom: 1rem;
+      object-fit: contain;
     }
 
     p {
@@ -37,8 +40,8 @@
 
     @media (max-width: 768px) {
       img {
-        width: 90vw;
         max-width: 90vw;
+        max-height: 70vh;
       }
       p {
         font-size: 0.9rem;
@@ -51,3 +54,5 @@
   <p>Launching soon!</p>
 </body>
 </html>
+
+
