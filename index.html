@@ -1,33 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ForbinAI — Before AI...there was Forbin...</title>
   <style>
     html, body {
       margin: 0;
       height: 100%;
-      background-color: #ffffff;
       font-family: Helvetica, Arial, sans-serif;
+      background: linear-gradient(180deg, #1a1a1a 0%, #000000 60%, #0d0f12 100%);
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
     }
 
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      padding: 2vh 2vw;
+      box-sizing: border-box;
+    }
+
     img {
-      max-width: 96vw;
-      max-height: 92vh;  /* ⬆️ fills nearly the entire screen without cutting off */
       width: auto;
       height: auto;
-      border: 6px solid #fff;
-      box-shadow: 0 0 30px rgba(0,0,0,0.08);
+      max-width: 95vw;
+      max-height: 90vh;
       object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 0 40px rgba(0,0,0,0.4);
+    }
+
+    /* Smooth fade-in */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.97); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .wrapper {
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @media (max-width: 768px) {
+      img {
+        max-width: 94vw;
+        max-height: 80vh;
+      }
     }
   </style>
 </head>
 <body>
-  <img src="ForbinAI_WebOptimized_1200px.png" alt="COLOSSUS / ForbinAI Poster">
+  <div class="wrapper">
+    <img src="ForbinAI_WebOptimized_1200px.png" alt="COLOSSUS / ForbinAI Poster" />
+  </div>
 </body>
 </html>
