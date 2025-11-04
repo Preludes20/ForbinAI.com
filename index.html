@@ -14,17 +14,27 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      overflow: hidden; /* prevent scrollbars */
+      overflow: hidden;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      width: 100vw;
+      box-sizing: border-box;
+      padding: 2vh 2vw; /* breathing space */
     }
 
     img {
       max-width: 90vw;
-      max-height: 80vh;   /* 👈 critical line — always fit image within 80% of viewport height */
+      max-height: 70vh;   /* ensures full triangle + text visible */
       height: auto;
       width: auto;
       border: 6px solid #fff;
       box-shadow: 0 0 30px rgba(0,0,0,0.08);
-      margin-bottom: 1rem;
       object-fit: contain;
     }
 
@@ -34,14 +44,14 @@
       letter-spacing: 0.05em;
       text-transform: uppercase;
       font-weight: bold;
-      margin: 0;
+      margin: 1vh 0 0 0;
       text-align: center;
     }
 
     @media (max-width: 768px) {
       img {
-        max-width: 90vw;
-        max-height: 70vh;
+        max-width: 95vw;
+        max-height: 60vh;
       }
       p {
         font-size: 0.9rem;
@@ -50,9 +60,10 @@
   </style>
 </head>
 <body>
-  <img src="ForbinAI_WebOptimized_1200px.png" alt="COLOSSUS / ForbinAI Poster">
-  <p>Launching soon!</p>
+  <div class="wrapper">
+    <img src="ForbinAI_WebOptimized_1200px.png" alt="COLOSSUS / ForbinAI Poster">
+    <p>Launching soon!</p>
+  </div>
 </body>
 </html>
-
 
