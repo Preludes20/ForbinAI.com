@@ -6,32 +6,33 @@
   <title>ForbinAI — Before AI...there was Forbin...</title>
   <style>
     html, body {
-      height: 100%;
       margin: 0;
-      background: #fff;
+      height: 100%;
+      background-color: #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
     img {
-      width: 80vw;           /* 80% of the visible window width */
-      max-width: 900px;      /* never grow larger than 900 px */
-      height: auto;          /* keep proportions */
-      border: 8px solid #fff;/* subtle frame so edges look crisp */
-      box-shadow: 0 0 25px rgba(0,0,0,0.1);
+      width: auto;
+      max-width: 700px;    /* 🚨 hard cap: image will never exceed 700 pixels wide */
+      height: auto;
+      border: 6px solid #fff;
+      box-shadow: 0 0 30px rgba(0,0,0,0.08);
     }
 
     @media (max-width: 768px) {
       img {
-        width: 95vw;         /* a bit larger on phones */
-        max-width: 95vw;
+        width: 90vw;       /* fill 90% of small screens */
+        max-width: 90vw;
       }
     }
   </style>
 </head>
 <body>
-<img src="ForbinAI_WebOptimized_1200px.png" alt="COLOSSUS / ForbinAI Poster">
+  <img src="ForbinAI_WebOptimized_1200px.png" alt="COLOSSUS / ForbinAI Poster">
 </body>
 </html>
+
 
