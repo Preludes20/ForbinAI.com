@@ -9,364 +9,429 @@
     html { scroll-behavior: smooth; }
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #0b1f33;
-      color: #ffffff;
+      background: #071827;
+      color: #fff;
       line-height: 1.6;
     }
-    a { color: inherit; text-decoration: none; }
-    .wrap { max-width: 1180px; margin: 0 auto; padding: 28px; }
+    a { text-decoration: none; color: inherit; }
+
+    .hero {
+      min-height: 720px;
+      background:
+        linear-gradient(90deg, rgba(7,24,39,.98) 0%, rgba(7,24,39,.82) 42%, rgba(7,24,39,.18) 100%),
+        url("hero-globe.png") center right / cover no-repeat;
+      padding: 28px 48px 70px;
+    }
 
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 18px 0 60px;
-    }
-    .logo { display: flex; align-items: center; gap: 14px; }
-    .logo img { width: 58px; height: auto; }
-    .logo-text { font-size: 28px; font-weight: 800; letter-spacing: 2px; }
-    .logo-text span { color: #f2b632; }
-    nav a {
-      margin-left: 24px;
-      font-size: 13px;
-      font-weight: 700;
-      color: #d8e8f8;
+      max-width: 1280px;
+      margin: 0 auto 90px;
     }
 
-    .hero {
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 50px;
+    .brand {
+      display: flex;
       align-items: center;
-      padding-bottom: 70px;
+      gap: 16px;
     }
-    .eyebrow {
-      color: #f2b632;
-      font-size: 14px;
+
+    .brand img {
+      width: 70px;
+    }
+
+    .brand-title {
+      font-size: 34px;
+      font-weight: 900;
+      letter-spacing: 3px;
+    }
+
+    .brand-title span {
+      color: #f6b21a;
+    }
+
+    .tagline {
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      color: #d7e4f2;
+      margin-top: -4px;
+    }
+
+    nav a {
+      margin-left: 28px;
+      font-size: 13px;
       font-weight: 800;
-      letter-spacing: 2px;
-      margin-bottom: 18px;
-      text-transform: uppercase;
+      color: #f4f7fb;
     }
+
+    .hero-content {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding-top: 40px;
+      max-width: 620px;
+    }
+
+    .eyebrow {
+      color: #f6b21a;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
     h1 {
       font-size: 64px;
       line-height: 1.02;
-      letter-spacing: -2px;
-      margin-bottom: 22px;
-    }
-    .hero p {
-      font-size: 19px;
-      color: #c9d9e8;
-      max-width: 620px;
-      margin-bottom: 26px;
-    }
-    .actions { display: flex; gap: 14px; flex-wrap: wrap; }
-    .btn {
-      display: inline-block;
-      padding: 14px 22px;
-      border-radius: 8px;
-      font-weight: 800;
-      font-size: 14px;
-      letter-spacing: .3px;
-    }
-    .btn.primary { background: #f2b632; color: #081827; }
-    .btn.secondary { border: 1px solid #6f879f; color: #ffffff; }
-
-    .hero-panel {
-      border: 1px solid rgba(255,255,255,.16);
-      background: linear-gradient(145deg, rgba(255,255,255,.09), rgba(255,255,255,.03));
-      border-radius: 22px;
-      padding: 36px;
-      text-align: center;
-      box-shadow: 0 25px 60px rgba(0,0,0,.30);
-    }
-    .hero-panel img {
-      width: 250px;
-      max-width: 80%;
+      text-transform: uppercase;
       margin-bottom: 24px;
+      letter-spacing: -1px;
     }
-    .hero-panel h2 {
-      font-size: 28px;
-      margin-bottom: 8px;
+
+    .gold-line {
+      width: 90px;
+      height: 5px;
+      background: #f6b21a;
+      margin: 0 0 28px;
     }
-    .hero-panel p {
-      font-size: 15px;
-      margin: 0;
-      color: #c9d9e8;
+
+    .hero-content p {
+      font-size: 18px;
+      color: #d7e4f2;
+      max-width: 570px;
+      margin-bottom: 18px;
+    }
+
+    .buttons {
+      margin-top: 34px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 24px;
+      border-radius: 7px;
+      font-weight: 900;
+      font-size: 14px;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: #f6b21a;
+      color: #061827;
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,.45);
+      color: #fff;
     }
 
     .section {
-      margin: 32px 0;
-      padding: 42px;
-      border-radius: 20px;
-      background: rgba(255,255,255,.055);
-      border: 1px solid rgba(255,255,255,.12);
+      max-width: 1280px;
+      margin: 0 auto 28px;
+      padding: 42px 36px;
+      background: rgba(255,255,255,.045);
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 16px;
     }
-    .section-heading { text-align: center; margin-bottom: 32px; }
-    .section-heading small {
-      color: #f2b632;
-      font-weight: 900;
-      letter-spacing: 2px;
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 34px;
+    }
+
+    .section-title small {
+      color: #f6b21a;
       text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 900;
     }
-    .section-heading h2 {
-      font-size: 38px;
+
+    .section-title h2 {
+      font-size: 34px;
       margin-top: 8px;
     }
 
-    .domains {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 18px;
+    .section-title p {
+      color: #d7e4f2;
+      max-width: 760px;
+      margin: 10px auto 0;
     }
-    .domain {
-      background: rgba(6, 23, 38, .75);
-      border: 1px solid rgba(255,255,255,.14);
-      border-radius: 16px;
-      padding: 24px 18px;
-      text-align: center;
-      min-height: 190px;
-    }
-    .domain .icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: rgba(242,182,50,.16);
-      color: #f2b632;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 900;
-      margin: 0 auto 16px;
-      font-size: 22px;
-    }
-    .domain h3 { font-size: 17px; margin-bottom: 10px; }
-    .domain p { color: #c9d9e8; font-size: 14px; }
 
-    .method-grid {
+    .cards {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 16px;
     }
-    .step {
-      padding: 22px;
-      border-radius: 14px;
-      background: rgba(255,255,255,.045);
-      border: 1px solid rgba(255,255,255,.12);
-    }
-    .step strong { color: #f2b632; display: block; margin-bottom: 8px; }
-    .step p { color: #c9d9e8; font-size: 14px; }
 
-    .why {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 26px;
+    .card {
+      text-align: center;
+      padding: 26px 18px;
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 12px;
+      background: rgba(7,24,39,.7);
+      min-height: 210px;
     }
-    .why p { color: #c9d9e8; margin-bottom: 14px; }
-    .quote {
-      background: rgba(242,182,50,.11);
-      border-left: 4px solid #f2b632;
+
+    .icon {
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      border: 2px solid #f6b21a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 18px;
+      color: #f6b21a;
+      font-size: 24px;
+      font-weight: 900;
+    }
+
+    .card h3 {
+      font-size: 17px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #d7e4f2;
+      font-size: 14px;
+    }
+
+    .method {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+      text-align: center;
+    }
+
+    .step strong {
+      color: #f6b21a;
+      display: block;
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+
+    .step p {
+      color: #d7e4f2;
+      font-size: 14px;
+    }
+
+    .roadmap {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .roadmap div {
       padding: 24px;
       border-radius: 12px;
-      font-size: 22px;
-      font-weight: 800;
-      line-height: 1.35;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(7,24,39,.65);
     }
 
-    .release {
+    .roadmap strong {
+      color: #f6b21a;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .release-box {
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 24px;
     }
-    .release h2 { font-size: 34px; }
-    .release p { color: #c9d9e8; margin-top: 8px; }
+
+    .release-box p {
+      color: #d7e4f2;
+      margin-top: 8px;
+    }
 
     footer {
-      padding: 46px 0 18px;
-      color: #c9d9e8;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 44px 36px 24px;
       display: grid;
-      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
       gap: 30px;
+      color: #d7e4f2;
     }
-    footer h3, footer h4 { color: #ffffff; margin-bottom: 10px; }
-    footer a, footer p { display: block; margin-bottom: 7px; color: #c9d9e8; }
+
+    footer h3, footer h4 {
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    footer a, footer p {
+      display: block;
+      color: #d7e4f2;
+      margin-bottom: 7px;
+    }
+
     .copyright {
       text-align: center;
-      color: #91a8bc;
-      padding: 20px 0 10px;
+      color: #8fa9bd;
+      padding: 18px 0 30px;
       font-size: 13px;
     }
 
     @media (max-width: 900px) {
-      header, .hero, .why, .release, footer { display: block; }
-      nav { margin-top: 18px; }
+      .hero { padding: 24px; background-position: center right; }
+      header, .release-box, footer { display: block; }
+      nav { margin-top: 20px; }
       nav a { display: inline-block; margin: 8px 14px 0 0; }
       h1 { font-size: 42px; }
-      .domains, .method-grid { grid-template-columns: 1fr; }
-      .hero-panel { margin-top: 30px; }
-      .section { padding: 28px; }
+      .cards, .method, .roadmap { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 
 <body>
-  <div class="wrap">
+
+  <div class="hero">
     <header>
-      <div class="logo">
+      <div class="brand">
         <img src="Forbin final high res PNG.png" alt="ForbinAI logo">
-        <div class="logo-text">FORBIN<span>AI</span></div>
+        <div>
+          <div class="brand-title">FORBIN<span>AI</span></div>
+          <div class="tagline">THE TRUST LAYER FOR ARTIFICIAL INTELLIGENCE</div>
+        </div>
       </div>
+
       <nav>
+        <a href="#mission">MISSION</a>
         <a href="#framework">FRAMEWORK</a>
         <a href="#methodology">METHODOLOGY</a>
         <a href="#release">RELEASE</a>
+        <a href="#roadmap">ROADMAP</a>
         <a href="#contact">CONTACT</a>
       </nav>
     </header>
 
-    <main class="hero">
-      <div>
-        <div class="eyebrow">AI Governance • Human Authority • Trust Verified</div>
-        <h1>The Colossus Framework™</h1>
-        <p>
-          An independent AI governance framework designed to help organizations measure,
-          monitor, and improve trust in artificial intelligence systems.
-        </p>
-        <div class="actions">
-          <a class="btn primary" href="https://github.com/Preludes20/Colossus-Framework" target="_blank">View Framework</a>
-          <a class="btn secondary" href="#release">Founding Principles v0.9</a>
-        </div>
-      </div>
-
-      <div class="hero-panel">
-        <img src="Forbin final high res PNG.png" alt="Colossus Framework logo">
-        <h2>Founding Principles Release</h2>
-        <p>Version 0.9 | June 2026</p>
-      </div>
-    </main>
-
-    <section class="section" id="framework">
-      <div class="section-heading">
-        <small>The Five Core Domains</small>
-        <h2>The Foundation of Responsible AI</h2>
-      </div>
-
-      <div class="domains">
-        <div class="domain">
-          <div class="icon">H</div>
-          <h3>Human Authority & Oversight</h3>
-          <p>Preserves human judgment, control, and accountable decision-making.</p>
-        </div>
-        <div class="domain">
-          <div class="icon">T</div>
-          <h3>Transparency</h3>
-          <p>Evaluates clarity, explainability, uncertainty, and evidence.</p>
-        </div>
-        <div class="domain">
-          <div class="icon">A</div>
-          <h3>Accountability</h3>
-          <p>Identifies who remains responsible for AI-driven decisions and outcomes.</p>
-        </div>
-        <div class="domain">
-          <div class="icon">S</div>
-          <h3>Safety</h3>
-          <p>Assesses harm, misuse, unsafe reliance, and boundary failures.</p>
-        </div>
-        <div class="domain">
-          <div class="icon">P</div>
-          <h3>Privacy</h3>
-          <p>Protects human dignity, autonomy, information rights, and data use.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="methodology">
-      <div class="section-heading">
-        <small>Our Methodology</small>
-        <h2>A Structured, Repeatable Approach</h2>
-      </div>
-
-      <div class="method-grid">
-        <div class="step"><strong>01 DEFINE</strong><p>Define the AI system, use case, governance scope, and intended impact.</p></div>
-        <div class="step"><strong>02 ASSESS</strong><p>Evaluate evidence, oversight, accountability, transparency, safety, and privacy.</p></div>
-        <div class="step"><strong>03 MEASURE</strong><p>Develop Colossus Risk Indicators™ to identify governance and trust conditions.</p></div>
-        <div class="step"><strong>04 IMPROVE</strong><p>Provide recommendations to strengthen responsible AI governance.</p></div>
-        <div class="step"><strong>05 MONITOR</strong><p>Track how trust, risk, oversight, and accountability change as AI evolves.</p></div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-heading">
-        <small>Why It Matters</small>
-        <h2>AI Trust Is a Moving Target</h2>
-      </div>
-
-      <div class="why">
-        <div>
-          <p>
-            AI systems are not static. Their capabilities, deployment contexts, risks,
-            safeguards, and governance needs change over time.
-          </p>
-          <p>
-            Organizations need practical ways to understand whether AI systems are transparent,
-            accountable, safe, privacy-respecting, and subject to meaningful human oversight.
-          </p>
-        </div>
-        <div class="quote">
-          Trust is not what an AI claims.<br>
-          Trust is what can be independently verified.
-        </div>
-      </div>
-    </section>
-
-    <section class="section release" id="release">
-      <div>
-        <h2>Colossus Framework™ Founding Principles Release</h2>
-        <p>Version 0.9 establishes the framework's foundational principles and governance domains.</p>
-      </div>
-      <div class="actions">
-        <a class="btn primary" href="https://github.com/Preludes20/Colossus-Framework" target="_blank">View on GitHub</a>
-      </div>
-    </section>
-
-    <section class="section" id="contact">
-      <div class="section-heading">
-        <small>Contact</small>
-        <h2>Questions or Partnerships?</h2>
-      </div>
-      <p style="text-align:center; color:#c9d9e8;">
-        For inquiries regarding ForbinAI™, the Colossus Framework™, or future governance assessment work:
+    <div class="hero-content">
+      <div class="eyebrow">AI Governance • Human Authority • Trust Verified</div>
+      <h1>The Colossus Framework™</h1>
+      <div class="gold-line"></div>
+      <p>
+        An independent AI governance framework designed to help organizations measure,
+        monitor, and improve trust in artificial intelligence systems.
       </p>
-      <p style="text-align:center; margin-top:18px;">
-        <a class="btn primary" href="mailto:info@forbinai.com">info@forbinai.com</a>
+      <p>
+        Built around practical principles for transparency, accountability, safety,
+        privacy, and meaningful human oversight.
       </p>
-    </section>
 
-    <footer>
-      <div>
-        <h3>ForbinAI™</h3>
-        <p>Independent AI governance for the age of intelligent systems.</p>
+      <div class="buttons">
+        <a class="btn btn-primary" href="https://github.com/Preludes20/Colossus-Framework" target="_blank">VIEW FRAMEWORK</a>
+        <a class="btn btn-secondary" href="#release">RELEASE v0.9</a>
       </div>
-      <div>
-        <h4>Framework</h4>
-        <a href="https://github.com/Preludes20/Colossus-Framework" target="_blank">Colossus Framework™</a>
-        <a href="https://github.com/Preludes20/Colossus-Framework/blob/main/ROADMAP.md" target="_blank">Roadmap</a>
-      </div>
-      <div>
-        <h4>In Development</h4>
-        <p>Colossus Risk Indicators™</p>
-        <p>Colossus Trust Index™</p>
-        <p>AI Governance Assessment</p>
-      </div>
-      <div>
-        <h4>Founder</h4>
-        <p>Dr. Jerald Thompson</p>
-        <p>Founder & Chief Architect</p>
-      </div>
-    </footer>
-
-    <div class="copyright">© 2026 ForbinAI™. All rights reserved.</div>
+    </div>
   </div>
+
+  <section class="section" id="mission">
+    <div class="section-title">
+      <small>Mission</small>
+      <h2>Responsible AI Requires Measurable Trust</h2>
+      <p>
+        The Colossus Framework™ exists to help organizations evaluate how AI systems are governed,
+        how risks are managed, and how human authority is preserved as AI capabilities evolve.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="framework">
+    <div class="section-title">
+      <small>The Five Core Domains</small>
+      <h2>The Foundation of Responsible AI</h2>
+      <p>The framework is organized around five interconnected domains.</p>
+    </div>
+
+    <div class="cards">
+      <div class="card"><div class="icon">H</div><h3>Human Oversight</h3><p>Preserves human judgment, authority, and accountable decision-making.</p></div>
+      <div class="card"><div class="icon">T</div><h3>Transparency</h3><p>Measures clarity, explainability, uncertainty, and openness.</p></div>
+      <div class="card"><div class="icon">A</div><h3>Accountability</h3><p>Assesses responsibility, traceability, and governance structures.</p></div>
+      <div class="card"><div class="icon">S</div><h3>Safety</h3><p>Evaluates harm, misuse, unsafe reliance, and unintended consequences.</p></div>
+      <div class="card"><div class="icon">P</div><h3>Privacy</h3><p>Protects personal information, autonomy, security, and human dignity.</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="methodology">
+    <div class="section-title">
+      <small>Our Methodology</small>
+      <h2>A Structured, Repeatable Approach</h2>
+    </div>
+
+    <div class="method">
+      <div class="step"><strong>1. DEFINE</strong><p>Define the AI system, use case, and evaluation scope.</p></div>
+      <div class="step"><strong>2. ASSESS</strong><p>Evaluate governance, oversight, evidence, and risk conditions.</p></div>
+      <div class="step"><strong>3. MEASURE</strong><p>Develop Colossus Risk Indicators™ for measurable trust conditions.</p></div>
+      <div class="step"><strong>4. IMPROVE</strong><p>Provide recommendations for stronger AI governance.</p></div>
+      <div class="step"><strong>5. MONITOR</strong><p>Track how trust, risk, and oversight change over time.</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="release">
+    <div class="release-box">
+      <div>
+        <h2>Founding Principles Release</h2>
+        <p>
+          Version 0.9 establishes the foundational principles of the Colossus Framework™
+          and introduces the direction for future releases.
+        </p>
+      </div>
+      <div class="buttons">
+        <a class="btn btn-primary" href="https://github.com/Preludes20/Colossus-Framework" target="_blank">VIEW ON GITHUB</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="roadmap">
+    <div class="section-title">
+      <small>Roadmap</small>
+      <h2>What Comes Next</h2>
+    </div>
+
+    <div class="roadmap">
+      <div><strong>Phase 1</strong><p>Founding Principles Release v0.9</p></div>
+      <div><strong>Phase 2</strong><p>Colossus Risk Indicators™ (CRI)</p></div>
+      <div><strong>Phase 3</strong><p>Colossus Trust Index™ (CTI)</p></div>
+      <div><strong>Phase 4</strong><p>AI Governance Assessment</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="section-title">
+      <small>Contact</small>
+      <h2>Questions, Collaborations, or Framework Inquiries?</h2>
+      <p>Email: <a href="mailto:info@forbinai.com">info@forbinai.com</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <div>
+      <h3>FORBINAI™</h3>
+      <p>The trust layer for artificial intelligence.</p>
+    </div>
+    <div>
+      <h4>Framework</h4>
+      <a href="#framework">Colossus Framework™</a>
+      <a href="#methodology">Methodology</a>
+      <a href="#release">Release v0.9</a>
+    </div>
+    <div>
+      <h4>In Development</h4>
+      <p>Colossus Risk Indicators™</p>
+      <p>Colossus Trust Index™</p>
+      <p>AI Governance Assessment</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <a href="mailto:info@forbinai.com">info@forbinai.com</a>
+    </div>
+  </footer>
+
+  <div class="copyright">© 2026 ForbinAI™. All rights reserved.</div>
+
 </body>
 </html>
