@@ -16,11 +16,14 @@
     a { text-decoration: none; color: inherit; }
 
     .hero {
+       position: relative;
+       overflow: hidden;
       min-height: 720px;
       background:
         linear-gradient(90deg, rgba(7,24,39,.98) 0%, rgba(7,24,39,.82) 42%, rgba(7,24,39,.18) 100%),
         url("Glowing earth graphic.png") center right / cover no-repeat;
       padding: 28px 48px 70px;
+     
     }
 
     header {
@@ -71,10 +74,11 @@
   padding-top: 40px;
 .hero-logo {
   position: absolute;
-  right: 105px;
+  right: 110px;
   top: 210px;
-  width: 330px;
+  width: 360px;
   z-index: 2;
+  display: block;
 }
     }
 
