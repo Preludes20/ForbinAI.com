@@ -199,6 +199,8 @@
 
     .copyright { text-align: center; color: #8fa9bd; padding: 18px 0 30px; font-size: 13px; }
 
+    nav a.active { color: #f6b21a !important; border-bottom: 2px solid #f6b21a; padding-bottom: 2px; }
+
     @media (max-width: 900px) {
       .hero { padding: 24px; }
       header { display: block; }
@@ -228,7 +230,7 @@
       </div>
       <nav>
         <a href="#mission">MISSION</a>
-        <a href="#framework" class="active">FRAMEWORK</a>
+        <a href="#framework">FRAMEWORK</a>
         <a href="#solutions">SOLUTIONS</a>
         <a href="#insights">INSIGHTS</a>
         <a href="#about">ABOUT</a>
@@ -449,6 +451,16 @@
   </div>
 
   <div class="copyright">© 2026 ForbinAI. All rights reserved.</div>
+
+  <script>
+    const navLinks = document.querySelectorAll('nav a:not(.nav-cta)');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+      });
+    });
+  </script>
 
 </body>
 </html>
