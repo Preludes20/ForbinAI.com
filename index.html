@@ -200,7 +200,9 @@
     .copyright { text-align: center; color: #8fa9bd; padding: 18px 0 30px; font-size: 13px; }
 
     /* Methodology slideshow */
-    .method { position: relative; min-height: 260px; }
+    .method { position: relative; min-height: 260px; transition: min-height 0.6s ease; }
+    .method.grid-mode { min-height: auto; }
+
     .step-wrapper {
       position: absolute;
       top: 0; left: 0; right: 0;
@@ -209,10 +211,20 @@
       justify-content: center;
       opacity: 0;
       pointer-events: none;
-      transition: opacity 0.7s ease;
+      transition: opacity 0.7s ease, position 0s;
     }
     .step-wrapper.active-slide { opacity: 1; pointer-events: auto; }
     .step-wrapper .step { max-width: 480px; }
+
+    /* Grid mode: all five steps shown together, side by side */
+    .method.grid-mode .step-wrapper {
+      position: static;
+      opacity: 1;
+      pointer-events: auto;
+      flex: 1;
+    }
+    .method.grid-mode { display: flex; align-items: flex-start; justify-content: center; gap: 8px; }
+    .method.grid-mode .step-wrapper .step { max-width: none; }
 
     .step-icon-wrap { opacity: 0; transform: scale(0.7); transition: opacity 0.4s ease, transform 0.4s ease; }
     .step-icon-wrap.show { opacity: 1; transform: scale(1); }
@@ -223,7 +235,8 @@
     .step-desc { opacity: 0; transform: translateY(8px); transition: opacity 0.4s ease, transform 0.4s ease; color: #fff; }
     .step-desc.show { opacity: 1; transform: translateY(0); }
 
-    .slide-dots { display: flex; justify-content: center; gap: 10px; margin-top: 230px; }
+    .slide-dots { display: flex; justify-content: center; gap: 10px; margin-top: 230px; transition: opacity 0.3s ease; }
+    .method.grid-mode .slide-dots { display: none; }
     .slide-dot { width: 9px; height: 9px; border-radius: 50%; background: rgba(255,255,255,.25); transition: background 0.3s ease; }
     .slide-dot.dot-active { background: #f6b21a; }
 
@@ -238,6 +251,7 @@
       .cards, .audience-cards { grid-template-columns: 1fr; }
       .method { flex-direction: column; }
       .step-arrow { display: none; }
+      .method.grid-mode { flex-direction: column; gap: 24px; }
       .cta-banner { flex-direction: column; }
       .cta-banner-form { flex-direction: column; }
       .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -508,19 +522,36 @@
       });
     });
 
-    // Methodology slideshow: icon -> label -> description, one step at a time, looping
+    // Methodology slideshow: icon -> label -> description, one step at a time,
+    // then all five shown together, then loops back to the start.
     const slideshow = document.getElementById('method-slideshow');
     const slides = slideshow.querySelectorAll('.step-wrapper');
     const dots = slideshow.querySelectorAll('.slide-dot');
-    let currentSlide = 0;
     let slideshowStarted = false;
-    let slideshowTimer = null;
 
     function clearSlide(slide) {
       slide.classList.remove('active-slide');
       slide.querySelector('.step-icon-wrap').classList.remove('show');
       slide.querySelector('.step-label').classList.remove('show');
       slide.querySelector('.step-desc').classList.remove('show');
+    }
+
+    function showAllTogether() {
+      dots.forEach(d => d.classList.remove('dot-active'));
+      slideshow.classList.add('grid-mode');
+      slides.forEach(slide => {
+        slide.classList.add('active-slide');
+        slide.querySelector('.step-icon-wrap').classList.add('show');
+        slide.querySelector('.step-label').classList.add('show');
+        slide.querySelector('.step-desc').classList.add('show');
+      });
+
+      // Hold the full picture, then reset and restart the cycle
+      setTimeout(() => {
+        slides.forEach(clearSlide);
+        slideshow.classList.remove('grid-mode');
+        setTimeout(() => playSlide(0), 400);
+      }, 3500);
     }
 
     function playSlide(index) {
@@ -539,9 +570,12 @@
       setTimeout(() => label.classList.add('show'), 600);
       setTimeout(() => desc.classList.add('show'), 1100);
 
-      slideshowTimer = setTimeout(() => {
-        currentSlide = (index + 1) % slides.length;
-        playSlide(currentSlide);
+      setTimeout(() => {
+        if (index + 1 < slides.length) {
+          playSlide(index + 1);
+        } else {
+          showAllTogether();
+        }
       }, 3800);
     }
 
