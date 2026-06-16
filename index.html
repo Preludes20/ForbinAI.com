@@ -70,4 +70,283 @@
     .cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
     .card { text-align: center; padding: 30px 20px; border: 1px solid rgba(255,255,255,.15); border-radius: 12px; background: #071827; }
     .icon { width: 62px; height: 62px; border-radius: 50%; border: 2px solid #f6b21a; display: flex; justify-content: center; align-items: center; margin: 0 auto 18px; color: #f6b21a; }
-    .icon svg { width: 28px; height: 28px; stroke: #f6b21a; fill:
+    .icon svg { width: 28px; height: 28px; stroke: #f6b21a; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .card h3 { font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 14px; font-weight: 700; }
+    .card p { color: #d7e4f2; font-size: 13px; line-height: 1.6; margin-bottom: 10px; }
+    .card p.card-tagline { color: #f6b21a; font-style: italic; font-size: 12px; margin-bottom: 0; }
+
+    .method { display: flex; align-items: flex-start; justify-content: center; }
+    .step-wrapper { display: flex; align-items: center; flex: 1; }
+    .step { text-align: center; flex: 1; }
+    .step-icon { width: 62px; height: 62px; border-radius: 50%; border: 2px solid #f6b21a; display: flex; justify-content: center; align-items: center; margin: 0 auto 14px; }
+    .step-icon svg { width: 26px; height: 26px; stroke: #f6b21a; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .step-arrow { width: 36px; flex-shrink: 0; text-align: center; color: #f6b21a; font-size: 20px; padding-bottom: 40px; }
+    .step strong { color: #f6b21a; display: block; margin-bottom: 8px; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; }
+    .step p { color: #d7e4f2; font-size: 13px; }
+
+    .audience-cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+    .audience-card { padding: 28px 18px; border: 1px solid rgba(255,255,255,.12); border-radius: 12px; background: #071827; }
+    .aud-icon { width: 52px; height: 52px; border-radius: 50%; border: 2px solid rgba(246,178,26,.5); display: flex; justify-content: center; align-items: center; margin-bottom: 14px; }
+    .aud-icon svg { width: 24px; height: 24px; stroke: #f6b21a; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .audience-card h4 { color: #f6b21a; font-size: 13px; font-weight: 700; margin-bottom: 10px; }
+    .audience-card p { color: #d7e4f2; font-size: 13px; line-height: 1.6; }
+
+    .cta-banner { max-width: 1280px; margin: 0 auto 28px; padding: 40px 48px; background: #0d2137; border: 1px solid rgba(255,255,255,.10); border-radius: 16px; display: flex; align-items: center; gap: 40px; }
+    .cta-banner-icon { width: 72px; height: 72px; border-radius: 50%; border: 2px solid rgba(246,178,26,.4); display: flex; justify-content: center; align-items: center; flex-shrink: 0; }
+    .cta-banner-icon svg { width: 32px; height: 32px; stroke: #f6b21a; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .cta-banner-text { flex: 1; }
+    .cta-banner-text h2 { font-size: 24px; margin-bottom: 8px; }
+    .cta-banner-text p { color: #d7e4f2; font-size: 15px; }
+    .cta-banner-form { display: flex; gap: 12px; flex-shrink: 0; }
+    .cta-banner-form input { padding: 12px 18px; border-radius: 7px; border: 1px solid rgba(255,255,255,.20); background: #071827; color: #fff; font-size: 14px; width: 220px; }
+    .cta-banner-form input::placeholder { color: #8fa9bd; }
+
+    .footer-wrapper { max-width: 1280px; margin: 40px auto 0; padding: 44px 36px 24px; }
+    .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr 1.4fr; gap: 30px; padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,.1); }
+    .footer-brand .brand-title { font-size: 22px; letter-spacing: 2px; margin-bottom: 4px; }
+    .footer-brand .tagline { font-size: 10px; margin-bottom: 16px; }
+    .footer-social { display: flex; gap: 12px; margin-top: 14px; }
+    .footer-social a { width: 32px; height: 32px; border: 1px solid rgba(255,255,255,.25); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 13px; transition: border-color 0.2s; }
+    .footer-social a:hover { border-color: #f6b21a; color: #f6b21a; }
+    .footer-col h4 { font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 14px; color: #fff; }
+    .footer-col a, .footer-col p { display: block; color: #d7e4f2; font-size: 13px; margin-bottom: 8px; }
+    .footer-col a:hover { color: #f6b21a; }
+    .footer-contact-box { border: 1px solid rgba(255,255,255,.15); border-radius: 10px; padding: 20px; background: #0d2137; margin-bottom: 20px; }
+    .footer-contact-box h4 { font-size: 13px; font-weight: 700; margin-bottom: 14px; color: #fff; }
+    .footer-contact-box a { color: #d7e4f2; font-size: 13px; display: flex; align-items: center; gap: 8px; }
+    .footer-contact-box a:hover { color: #f6b21a; }
+
+    .copyright { text-align: center; color: #8fa9bd; padding: 18px 0 30px; font-size: 13px; }
+
+    @media (max-width: 900px) {
+      .hero { padding: 24px; }
+      header { display: block; }
+      nav { margin-top: 20px; flex-wrap: wrap; }
+      nav a { display: inline-block; margin: 8px 14px 0 0; }
+      h1 { font-size: 42px; }
+      .cards, .audience-cards { grid-template-columns: 1fr; }
+      .method { flex-direction: column; }
+      .step-arrow { display: none; }
+      .cta-banner { flex-direction: column; }
+      .cta-banner-form { flex-direction: column; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .hero-logo { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <header>
+      <div class="brand">
+        <img src="colossus-logo.png" alt="Colossus Framework Logo">
+        <div>
+          <div class="brand-title">FORBIN<span>AI</span></div>
+          <div class="tagline">THE TRUST LAYER FOR ARTIFICIAL INTELLIGENCE</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#mission">MISSION</a>
+        <a href="#framework" class="active">FRAMEWORK</a>
+        <a href="#solutions">SOLUTIONS</a>
+        <a href="#insights">INSIGHTS</a>
+        <a href="#about">ABOUT</a>
+        <a href="#contact">CONTACT</a>
+        <a class="nav-cta" href="mailto:info@forbinai.com?subject=Join%20Early%20Access">JOIN EARLY ACCESS →</a>
+      </nav>
+    </header>
+    <div class="hero-content">
+      <div class="breadcrumb"><a href="#">Home</a> &gt; <span>The Colossus Framework™</span></div>
+      <h1>The Colossus<br>Framework™</h1>
+      <div class="gold-line"></div>
+      <p><strong>A comprehensive methodology for evaluating AI systems across the dimensions that matter most for trust, safety, and human well-being.</strong></p>
+      <p>The Colossus Framework™ provides organizations with a structured, repeatable approach to assess, monitor, and govern AI systems throughout their lifecycle.</p>
+    </div>
+    <img class="hero-logo" src="colossus-framework-hero.png" alt="Colossus Framework Logo">
+  </div>
+
+  <section class="section" id="framework">
+    <div class="section-title">
+      <small>The Five Core Principles</small>
+      <h2>The Foundation of Responsible AI</h2>
+      <p>The Colossus Framework™ is built on five interconnected principles that ensure AI systems are trustworthy, responsible, and aligned with human values.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Safety</h3>
+        <p>Evaluates potential for harm, misuse, and unintended consequences.</p>
+        <p class="card-tagline">We prioritize systems that do no harm.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M22 12c-2.667 4.667-6 7-10 7s-7.333-2.333-10-7c2.667-4.667 6-7 10-7s7.333 2.333 10 7"/></svg></div>
+        <h3>Transparency</h3>
+        <p>Measures clarity, explainability, and openness of data and model behavior.</p>
+        <p class="card-tagline">We believe AI decisions should be understandable.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <h3>Accountability</h3>
+        <p>Assesses responsibility, traceability, and governance structures.</p>
+        <p class="card-tagline">We ensure there is always a human answerable.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>Human Oversight</h3>
+        <p>Examines the role of human judgment and control in AI decision-making.</p>
+        <p class="card-tagline">We keep humans in the loop.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <h3>Privacy</h3>
+        <p>Reviews data practices, protection of personal information, and security.</p>
+        <p class="card-tagline">We protect what matters most.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="methodology">
+    <div class="section-title">
+      <small>Our Methodology</small>
+      <h2>A Structured, Repeatable Approach</h2>
+    </div>
+    <div class="method">
+      <div class="step-wrapper">
+        <div class="step">
+          <div class="step-icon"><svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="2"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="11" y2="16"/></svg></div>
+          <strong>1. DEFINE</strong>
+          <p>Define the AI system, use case, and evaluation scope.</p>
+        </div>
+        <div class="step-arrow">→</div>
+      </div>
+      <div class="step-wrapper">
+        <div class="step">
+          <div class="step-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+          <strong>2. ASSESS</strong>
+          <p>Evaluate across five principles using detailed criteria and evidence.</p>
+        </div>
+        <div class="step-arrow">→</div>
+      </div>
+      <div class="step-wrapper">
+        <div class="step">
+          <div class="step-icon"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+          <strong>3. SCORE</strong>
+          <p>Generate quantitative scores and qualitative insights.</p>
+        </div>
+        <div class="step-arrow">→</div>
+      </div>
+      <div class="step-wrapper">
+        <div class="step">
+          <div class="step-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+          <strong>4. RECOMMEND</strong>
+          <p>Provide risk-based recommendations for improvement.</p>
+        </div>
+        <div class="step-arrow">→</div>
+      </div>
+      <div class="step-wrapper">
+        <div class="step">
+          <div class="step-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+          <strong>5. MONITOR</strong>
+          <p>Continuously monitor performance, risks, and evolving conditions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="solutions">
+    <div class="section-title">
+      <small>Why It Matters</small>
+      <h2>Built for the Real World</h2>
+    </div>
+    <div class="audience-cards">
+      <div class="audience-card">
+        <div class="aud-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h4>For Organizations</h4>
+        <p>Reduce risk, build trust, and demonstrate responsible AI leadership.</p>
+      </div>
+      <div class="audience-card">
+        <div class="aud-icon"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+        <h4>For Developers</h4>
+        <p>Build better AI systems with guidance that improves quality and safety.</p>
+      </div>
+      <div class="audience-card">
+        <div class="aud-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h4>For Regulators</h4>
+        <p>Gain consistent, evidence-based assessments to inform policy and oversight.</p>
+      </div>
+      <div class="audience-card">
+        <div class="aud-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h4>For Society</h4>
+        <p>Promote AI that is safe, aligned with values, and beneficial for all.</p>
+      </div>
+      <div class="audience-card">
+        <div class="aud-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+        <h4>For the Future</h4>
+        <p>Create a foundation for AI innovation that endures.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-banner" id="contact">
+    <div class="cta-banner-icon">
+      <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+    </div>
+    <div class="cta-banner-text">
+      <h2>Join the movement for responsible AI.</h2>
+      <p>Be part of the early access community shaping the future of trustworthy and human-centered AI.</p>
+    </div>
+    <div class="cta-banner-form">
+      <input type="email" placeholder="Enter your email address">
+      <a class="btn btn-primary" href="mailto:info@forbinai.com?subject=Join%20Early%20Access">JOIN EARLY ACCESS →</a>
+    </div>
+  </div>
+
+  <div class="footer-wrapper">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="colossus-logo.png" alt="Colossus Logo" style="width:60px; margin-bottom:10px;">
+        <div class="brand-title">FORBIN<span style="color:#f6b21a">AI</span></div>
+        <div class="tagline">THE TRUST LAYER FOR ARTIFICIAL INTELLIGENCE</div>
+        <div class="footer-social">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Twitter">✕</a>
+          <a href="mailto:info@forbinai.com" aria-label="Email">✉</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#mission">Mission</a>
+        <a href="#about">About</a>
+        <a href="#">Careers</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Framework</h4>
+        <a href="#framework">Colossus Framework</a>
+        <a href="#methodology">Methodology</a>
+        <a href="#">Research</a>
+        <a href="#">Resources</a>
+      </div>
+      <div class="footer-col">
+        <h4>Solutions</h4>
+        <a href="#solutions">Enterprise</a>
+        <a href="#">Risk Monitoring</a>
+        <a href="#">Assessments</a>
+        <a href="#">Custom Reports</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-contact-box">
+          <h4>Questions or Partnerships?</h4>
+          <a href="mailto:info@forbinai.com">✉ info@forbinai.com</a>
+        </div>
+        <h4>Legal</h4>
+        <a href="#" style="display:block; color:#d7e4f2; font-size:13px; margin-bottom:8px;">Privacy Policy</a>
+        <a href="#" style="display:block; color:#d7e4f2; font-size:13px; margin-bottom:8px;">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="copyright">© 2026 ForbinAI. All rights reserved.</div>
+
+</body>
+</html>
