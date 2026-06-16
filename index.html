@@ -199,9 +199,33 @@
 
     .copyright { text-align: center; color: #8fa9bd; padding: 18px 0 30px; font-size: 13px; }
 
-    /* Methodology step reveal animation */
-    .step-wrapper { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
-    .step-wrapper.reveal { opacity: 1; transform: translateY(0); }
+    /* Methodology slideshow */
+    .method { position: relative; min-height: 260px; }
+    .step-wrapper {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.7s ease;
+    }
+    .step-wrapper.active-slide { opacity: 1; pointer-events: auto; }
+    .step-wrapper .step { max-width: 480px; }
+
+    .step-icon-wrap { opacity: 0; transform: scale(0.7); transition: opacity 0.4s ease, transform 0.4s ease; }
+    .step-icon-wrap.show { opacity: 1; transform: scale(1); }
+
+    .step-label { opacity: 0; transform: translateY(8px); transition: opacity 0.4s ease, transform 0.4s ease; }
+    .step-label.show { opacity: 1; transform: translateY(0); }
+
+    .step-desc { opacity: 0; transform: translateY(8px); transition: opacity 0.4s ease, transform 0.4s ease; color: #fff; }
+    .step-desc.show { opacity: 1; transform: translateY(0); }
+
+    .slide-dots { display: flex; justify-content: center; gap: 10px; margin-top: 230px; }
+    .slide-dot { width: 9px; height: 9px; border-radius: 50%; background: rgba(255,255,255,.25); transition: background 0.3s ease; }
+    .slide-dot.dot-active { background: #f6b21a; }
 
     nav a.active { color: #f6b21a !important; border-bottom: 2px solid #f6b21a; padding-bottom: 2px; }
 
@@ -320,50 +344,54 @@
       <small>Our Methodology</small>
       <h2>A Structured, Repeatable Approach</h2>
     </div>
-    <div class="method">
+    <div class="method" id="method-slideshow">
 
-      <div class="step-wrapper">
+      <div class="step-wrapper" data-index="0">
         <div class="step step-define">
-          <div class="step-icon"><svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="2"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="11" y2="16"/></svg></div>
-          <strong>1. DEFINE</strong>
-          <p>Define the AI system, use case, and evaluation scope.</p>
+          <div class="step-icon-wrap"><div class="step-icon"><svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="2"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="11" y2="16"/></svg></div></div>
+          <strong class="step-label">1. DEFINE</strong>
+          <p class="step-desc">Define the AI system, use case, and evaluation scope.</p>
         </div>
-        <div class="step-arrow">→</div>
       </div>
 
-      <div class="step-wrapper">
+      <div class="step-wrapper" data-index="1">
         <div class="step step-assess">
-          <div class="step-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
-          <strong>2. ASSESS</strong>
-          <p>Evaluate across five principles using detailed criteria and evidence.</p>
+          <div class="step-icon-wrap"><div class="step-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></div>
+          <strong class="step-label">2. ASSESS</strong>
+          <p class="step-desc">Evaluate across five principles using detailed criteria and evidence.</p>
         </div>
-        <div class="step-arrow">→</div>
       </div>
 
-      <div class="step-wrapper">
+      <div class="step-wrapper" data-index="2">
         <div class="step step-score">
-          <div class="step-icon"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
-          <strong>3. SCORE</strong>
-          <p>Generate quantitative scores and qualitative insights.</p>
+          <div class="step-icon-wrap"><div class="step-icon"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div></div>
+          <strong class="step-label">3. SCORE</strong>
+          <p class="step-desc">Generate quantitative scores and qualitative insights.</p>
         </div>
-        <div class="step-arrow">→</div>
       </div>
 
-      <div class="step-wrapper">
+      <div class="step-wrapper" data-index="3">
         <div class="step step-recommend">
-          <div class="step-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
-          <strong>4. RECOMMEND</strong>
-          <p>Provide risk-based recommendations for improvement.</p>
+          <div class="step-icon-wrap"><div class="step-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div></div>
+          <strong class="step-label">4. RECOMMEND</strong>
+          <p class="step-desc">Provide risk-based recommendations for improvement.</p>
         </div>
-        <div class="step-arrow">→</div>
       </div>
 
-      <div class="step-wrapper">
+      <div class="step-wrapper" data-index="4">
         <div class="step step-monitor">
-          <div class="step-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-          <strong>5. MONITOR</strong>
-          <p>Continuously monitor performance, risks, and evolving conditions.</p>
+          <div class="step-icon-wrap"><div class="step-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div></div>
+          <strong class="step-label">5. MONITOR</strong>
+          <p class="step-desc">Continuously monitor performance, risks, and evolving conditions.</p>
         </div>
+      </div>
+
+      <div class="slide-dots">
+        <div class="slide-dot"></div>
+        <div class="slide-dot"></div>
+        <div class="slide-dot"></div>
+        <div class="slide-dot"></div>
+        <div class="slide-dot"></div>
       </div>
 
     </div>
@@ -480,20 +508,52 @@
       });
     });
 
-    // Staggered reveal for methodology steps
-    const methodSection = document.getElementById('methodology');
-    const stepWrappers = methodSection.querySelectorAll('.step-wrapper');
-    const observer = new IntersectionObserver((entries) => {
+    // Methodology slideshow: icon -> label -> description, one step at a time, looping
+    const slideshow = document.getElementById('method-slideshow');
+    const slides = slideshow.querySelectorAll('.step-wrapper');
+    const dots = slideshow.querySelectorAll('.slide-dot');
+    let currentSlide = 0;
+    let slideshowStarted = false;
+    let slideshowTimer = null;
+
+    function clearSlide(slide) {
+      slide.classList.remove('active-slide');
+      slide.querySelector('.step-icon-wrap').classList.remove('show');
+      slide.querySelector('.step-label').classList.remove('show');
+      slide.querySelector('.step-desc').classList.remove('show');
+    }
+
+    function playSlide(index) {
+      slides.forEach(clearSlide);
+      dots.forEach(d => d.classList.remove('dot-active'));
+
+      const slide = slides[index];
+      slide.classList.add('active-slide');
+      dots[index].classList.add('dot-active');
+
+      const icon = slide.querySelector('.step-icon-wrap');
+      const label = slide.querySelector('.step-label');
+      const desc = slide.querySelector('.step-desc');
+
+      setTimeout(() => icon.classList.add('show'), 100);
+      setTimeout(() => label.classList.add('show'), 600);
+      setTimeout(() => desc.classList.add('show'), 1100);
+
+      slideshowTimer = setTimeout(() => {
+        currentSlide = (index + 1) % slides.length;
+        playSlide(currentSlide);
+      }, 3800);
+    }
+
+    const slideObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          stepWrappers.forEach((step, i) => {
-            setTimeout(() => step.classList.add('reveal'), i * 350);
-          });
-          observer.disconnect();
+        if (entry.isIntersecting && !slideshowStarted) {
+          slideshowStarted = true;
+          playSlide(0);
         }
       });
     }, { threshold: 0.25 });
-    observer.observe(methodSection);
+    slideObserver.observe(slideshow);
   </script>
 
 </body>
