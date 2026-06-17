@@ -109,16 +109,17 @@
     /* ── Why Colossus cards ── */
     .why-cards-top { grid-template-columns: repeat(3, 1fr); margin-bottom: 16px; }
     .why-cards-bottom { grid-template-columns: repeat(2, 1fr); max-width: 800px; margin: 0 auto 16px; }
-    .card-why { text-align: left; }
+    .card-why { text-align: left; border-color: rgba(56,189,248,.25); }
     .card-why .icon { margin: 0 0 16px; }
-    .card-why .icon { border: 2px solid #f6b21a; }
-    .card-why .icon svg { stroke: #f6b21a; }
-    .card-why h3 { text-transform: none; font-size: 16px; letter-spacing: 0; }
+    .card-why .icon { border: 2px solid #38bdf8; }
+    .card-why .icon svg { stroke: #38bdf8; }
+    .card-why h3 { text-transform: none; font-size: 16px; letter-spacing: 0; margin-bottom: 0; }
+    .card-why-line { width: 28px; height: 3px; background: #f6b21a; margin: 10px 0 16px; }
     .card-why p { font-size: 14px; }
 
     .why-banner { display: flex; align-items: center; gap: 24px; padding: 28px 30px; background: #071827; border: 1px solid rgba(255,255,255,.12); border-radius: 12px; margin-top: 16px; }
-    .why-banner-icon { width: 56px; height: 56px; border-radius: 50%; border: 2px solid rgba(246,178,26,.45); display: flex; justify-content: center; align-items: center; flex-shrink: 0; }
-    .why-banner-icon svg { width: 26px; height: 26px; stroke: #f6b21a; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .why-banner-icon { width: 56px; height: 56px; border-radius: 50%; border: 2px solid rgba(56,189,248,.45); display: flex; justify-content: center; align-items: center; flex-shrink: 0; }
+    .why-banner-icon svg { width: 26px; height: 26px; stroke: #38bdf8; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
     .why-banner-text p { color: #d7e4f2; font-size: 15px; margin-bottom: 6px; }
     .why-banner-text p.why-banner-highlight { color: #38bdf8; font-weight: 700; margin-bottom: 0; }
 
