@@ -58,6 +58,7 @@
     #why-colossus { border-color: rgba(56,189,248,.3); }
     .section-title { text-align: center; margin-bottom: 40px; }
     .section-title small { color: #f6b21a; text-transform: uppercase; letter-spacing: 2px; font-weight: 900; font-size: 12px; }
+    .section-line { width: 40px; height: 4px; background: #f6b21a; margin: 0 auto 16px; }
     .section-title h2 { font-size: 34px; margin-top: 8px; }
     .section-title p { color: #d7e4f2; max-width: 760px; margin: 10px auto 0; }
 
