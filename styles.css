@@ -110,11 +110,12 @@
     .why-cards-top { grid-template-columns: repeat(3, 1fr); margin-bottom: 16px; }
     .why-cards-bottom { grid-template-columns: repeat(2, 1fr); max-width: 800px; margin: 0 auto 16px; }
     .card-why { text-align: left; border-color: rgba(56,189,248,.25); }
-    .card-why .icon { margin: 0 0 16px; }
+    .card-why-header { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+    .card-why .icon { margin: 0; flex-shrink: 0; }
     .card-why .icon { border: 2px solid #38bdf8; }
     .card-why .icon svg { stroke: #38bdf8; }
     .card-why h3 { text-transform: none; font-size: 16px; letter-spacing: 0; margin-bottom: 0; }
-    .card-why-line { width: 28px; height: 3px; background: #f6b21a; margin: 10px 0 16px; }
+    .card-why-line { width: 28px; height: 3px; background: #f6b21a; margin-top: 8px; }
     .card-why p { font-size: 14px; }
 
     .why-banner { display: flex; align-items: center; gap: 24px; padding: 28px 30px; background: #071827; border: 1px solid rgba(255,255,255,.12); border-radius: 12px; margin-top: 16px; }
