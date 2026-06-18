@@ -1,0 +1,11 @@
+/* ROADMAP SECTION */
+.roadmap-image-wrapper{
+  max-width:1400px;
+  margin:40px auto 0;
+}
+
+.roadmap-image{
+  width:100%;
+  display:block;
+  border-radius:16px;
+}
