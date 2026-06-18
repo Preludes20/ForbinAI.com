@@ -291,3 +291,6 @@
       .footer-grid { grid-template-columns: 1fr 1fr; }
       .hero-logo { display: none; }
     }
+
+    .why-callout-image-wrapper { width: 100%; margin-top: 16px; }
+    .why-callout-image { width: 100%; height: auto; display: block; }
