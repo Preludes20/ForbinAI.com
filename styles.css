@@ -109,7 +109,8 @@
 
     /* ── Why Colossus cards ── */
     .why-cards-top { grid-template-columns: repeat(3, 1fr); margin-bottom: 16px; }
-    .why-cards-bottom { grid-template-columns: repeat(2, 1fr); max-width: 800px; margin: 0 auto 16px; }
+    .why-cards-bottom { display: flex; justify-content: center; gap: 16px; margin-bottom: 16px; }
+    .why-cards-bottom .card-why { flex: 0 0 calc(33.333% - 11px); }
     .card-why { text-align: left; border-color: rgba(56,189,248,.25); }
     .card-why-header { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
     .card-why .icon { margin: 0; flex-shrink: 0; }
@@ -127,7 +128,9 @@
     .why-banner-text p.why-banner-highlight { color: #38bdf8; font-weight: 700; margin-bottom: 0; }
 
     @media (max-width: 900px) {
-      .why-cards-top, .why-cards-bottom { grid-template-columns: 1fr; }
+      .why-cards-top { grid-template-columns: 1fr; }
+      .why-cards-bottom { flex-direction: column; }
+      .why-cards-bottom .card-why { flex-basis: auto; width: 100%; }
       .why-banner { flex-direction: column; text-align: center; }
     }
 
