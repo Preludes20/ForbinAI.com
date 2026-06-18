@@ -55,7 +55,6 @@
     .btn-secondary { border: 1px solid rgba(255,255,255,.45); color: #fff; }
 
     .section { max-width: 1280px; margin: 0 auto 28px; padding: 52px 36px; background: #0d2137; border: 1px solid rgba(255,255,255,.10); border-radius: 16px; }
-    #why-colossus { border-color: rgba(56,189,248,.3); }
     .section-title { text-align: center; margin-bottom: 40px; }
     .section-title small { color: #f6b21a; text-transform: uppercase; letter-spacing: 2px; font-weight: 900; font-size: 12px; }
     .section-line { width: 40px; height: 4px; background: #f6b21a; margin: 0 auto 16px; }
@@ -292,13 +291,3 @@
       .footer-grid { grid-template-columns: 1fr 1fr; }
       .hero-logo { display: none; }
     }
-.why-callout-image-wrapper {
-  width: 100%;
-  margin-top: 24px;
-}
-
-.why-callout-image {
-  width: 100%;
-  display: block;
-  border-radius: 14px;
-}
