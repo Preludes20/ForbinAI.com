@@ -120,7 +120,7 @@
     .card-why-line { width: 28px; height: 3px; background: #f6b21a; margin-top: 8px; }
     .card-why p { font-size: 14px; }
 
-    .why-banner { display: flex; align-items: center; gap: 24px; padding: 28px 150px 28px 30px; background: #071827; border: 1px solid rgba(56,189,248,.25); border-radius: 12px; margin-top: 16px; position: relative; overflow: hidden; }
+    .why-banner { display: flex; align-items: center; gap: 24px; padding: 28px 150px 28px 30px; background: #071827; border: 1px solid rgba(56,189,248,.25); border-radius: 12px; margin-top: 16px; position: relative; overflow: hidden; width: 100%; }
     .why-banner-globe { position: absolute; right: -10px; top: 50%; transform: translateY(-50%); width: 140px; height: 140px; opacity: 0.9; pointer-events: none; }
     .why-banner-globe svg { width: 100%; height: 100%; }
     .why-banner-icon { width: 56px; height: 56px; display: flex; justify-content: center; align-items: center; flex-shrink: 0; }
