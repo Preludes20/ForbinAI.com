@@ -70,6 +70,16 @@
     .card.card-light p { color: #5a6b7b; }
     .icon.icon-light { border: 2px solid #0d2137; }
     .icon.icon-light svg { stroke: #0d2137; }
+    .icon.icon-light-1 { border-color: #14b8a6; }
+    .icon.icon-light-1 svg { stroke: #14b8a6; }
+    .icon.icon-light-2 { border-color: #3b82f6; }
+    .icon.icon-light-2 svg { stroke: #3b82f6; }
+    .icon.icon-light-3 { border-color: #8b5cf6; }
+    .icon.icon-light-3 svg { stroke: #8b5cf6; }
+    .icon.icon-light-4 { border-color: #f97316; }
+    .icon.icon-light-4 svg { stroke: #f97316; }
+    .icon.icon-light-5 { border-color: #10b981; }
+    .icon.icon-light-5 svg { stroke: #10b981; }
 
     /* ── Five Core Principles cards ── */
     .cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
