@@ -68,7 +68,7 @@
     .card.card-light { background: #fff; border: 1px solid #e1e6ec; }
     .card.card-light h3 { color: #0d2137; }
     .card.card-light p { color: #5a6b7b; transition: font-weight 0.5s ease, color 0.5s ease; }
-    .card-light .icon:hover ~ p { font-weight: 700; color: #0d2137; }
+    .card-light:hover p { font-weight: 700; color: #0d2137; }
     .icon.icon-light { border: 2px solid #0d2137; }
     .icon.icon-light svg { stroke: #0d2137; }
     .icon.icon-light-1 { border-color: #14b8a6; }
