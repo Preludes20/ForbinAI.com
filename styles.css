@@ -27,7 +27,7 @@
     }
 
     .brand { display: flex; align-items: center; gap: 16px; }
-    .brand img { width: 110px; }
+    .brand img { width: 110px; background: white; border-radius: 6px; padding: 4px; }
     .brand-title { font-size: 34px; font-weight: 900; letter-spacing: 3px; }
     .brand-title span { color: #f6b21a; }
     .tagline { font-size: 12px; letter-spacing: 1.5px; color: #d7e4f2; margin-top: -4px; }
