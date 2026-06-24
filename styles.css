@@ -320,3 +320,34 @@
   border-radius: 16px;
 }
 
+
+/* LOGO SCAN EYE */
+.logo-scan {
+  position: relative;
+  display: inline-block;
+}
+.logo-scan-overlay {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 12px;
+  top: 72%;
+  overflow: hidden;
+  background: transparent;
+  pointer-events: none;
+}
+.logo-scan-overlay::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: -20%;
+  width: 20%;
+  height: 8px;
+  background: radial-gradient(ellipse 100% 50% at center, #00c8ff 0%, #0066ff 50%, transparent 100%);
+  animation: logo-scan 9s ease-in-out infinite;
+}
+@keyframes logo-scan {
+  0%   { left: -20%; }
+  50%  { left: 100%; }
+  100% { left: -20%; }
+}
