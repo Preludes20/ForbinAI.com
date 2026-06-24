@@ -1,0 +1,37 @@
+/* Add this to your stylesheet */
+
+.logo-scan-wrap {
+  position: relative;
+  display: inline-block;
+  width: 110px;
+}
+
+.logo-scan-wrap img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.logo-scan-glow {
+  position: absolute;
+  top: 78%;
+  left: 22%;
+  width: 18px;
+  height: 3px;
+  border-radius: 999px;
+  background: #00cfff;
+  box-shadow:
+    0 0 6px #00cfff,
+    0 0 12px #00aaff;
+  pointer-events: none;
+  animation: colossusScan 7s ease-in-out infinite alternate;
+}
+
+@keyframes colossusScan {
+  from {
+    left: 22%;
+  }
+  to {
+    left: 63%;
+  }
+}
