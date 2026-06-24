@@ -27,7 +27,7 @@
     }
 
     .brand { display: flex; align-items: center; gap: 16px; }
-    .brand img { width: 110px; background: white; border-radius: 6px; padding: 4px; }
+    .brand img { width: 110px; }
     .brand-title { font-size: 34px; font-weight: 900; letter-spacing: 3px; }
     .brand-title span { color: #f6b21a; }
     .tagline { font-size: 12px; letter-spacing: 1.5px; color: #d7e4f2; margin-top: -4px; }
@@ -231,6 +231,7 @@
     .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr 1.4fr; gap: 30px; padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,.1); }
     .footer-brand .brand-title { font-size: 22px; letter-spacing: 2px; margin-bottom: 4px; }
     .footer-brand .tagline { font-size: 10px; margin-bottom: 16px; }
+    .footer-brand img { background: white; border-radius: 6px; padding: 4px; }
     .footer-social { display: flex; gap: 12px; margin-top: 14px; }
     .footer-social a { width: 32px; height: 32px; border: 1px solid rgba(255,255,255,.25); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 13px; transition: border-color 0.2s; }
     .footer-social a:hover { border-color: #f6b21a; color: #f6b21a; }
