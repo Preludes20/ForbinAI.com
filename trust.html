@@ -175,6 +175,17 @@
     .q2 h3 { color: #2563c6; }
     .q3 h3 { color: #1e7e3e; }
     .q4 h3 { color: #c0392b; }
+
+    .question-icon-svg {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 12px;
+    }
+    .q1 .question-icon-svg { color: #1a2f5e; }
+    .q2 .question-icon-svg { color: #2563c6; }
+    .q3 .question-icon-svg { color: #1e7e3e; }
+    .q4 .question-icon-svg { color: #c0392b; }
+    .question-icon-svg svg { width: 100%; height: 100%; }
     .question-card p {
       font-size: 13px;
       color: #555;
@@ -303,25 +314,49 @@
     <div class="four-questions-grid">
       <div class="question-card q1">
         <div class="question-number">1</div>
-        <span class="question-icon">❓</span>
+        <div class="question-icon-svg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
         <h3>What is Trust?</h3>
         <p>Trust is the justified confidence that an AI-enabled system will act within transparent, accountable, and governed boundaries.</p>
       </div>
       <div class="question-card q2">
         <div class="question-number">2</div>
-        <span class="question-icon">🛡</span>
+        <div class="question-icon-svg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <polyline points="9 12 11 14 15 10"/>
+          </svg>
+        </div>
         <h3>How is Trust Created?</h3>
         <p>Trust is earned through transparency, accountability, governance, meaningful human oversight, and continuous evaluation.</p>
       </div>
       <div class="question-card q3">
         <div class="question-number">3</div>
-        <span class="question-icon">📊</span>
+        <div class="question-icon-svg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="20" x2="18" y2="10"/>
+            <line x1="12" y1="20" x2="12" y2="4"/>
+            <line x1="6" y1="20" x2="6" y2="14"/>
+            <line x1="2" y1="20" x2="22" y2="20"/>
+          </svg>
+        </div>
         <h3>How is Trust Measured?</h3>
         <p>Trust is measured through evidence that governance is working and that outcomes align with stated intent.</p>
       </div>
       <div class="question-card q4">
         <div class="question-number">4</div>
-        <span class="question-icon">⚠️</span>
+        <div class="question-icon-svg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+            <line x1="12" y1="9" x2="12" y2="13"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
         <h3>How is Trust Lost?</h3>
         <p>Trust is lost when there is secrecy, inconsistency, lack of accountability, or failure of governance and oversight.</p>
       </div>
